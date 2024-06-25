@@ -16,7 +16,7 @@ const path = require('path');
 const {v4: uuidv4}=require('uuid');
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 const Letter = require("./models/letter");
-const MONGO_URI= process.env.EMAIL
+const MONGO_URI= process.env.mongodb
 // Connect to MongoDB (replace 'YOUR_MONGO_URI' with your actual MongoDB connection string)
 
 mongoose.connect(MONGO_URI, {
